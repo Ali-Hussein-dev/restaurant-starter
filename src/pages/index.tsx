@@ -5,7 +5,7 @@ import * as React from "react";
 //----------------------------------------------------------------------
 const Home: NextPage = () => {
   return (
-    <Layout title="Website Starter">
+    <Layout title="Restaurant Starter">
       <Hero />
       <Section id="#section2">
         <div className="px-2"></div>

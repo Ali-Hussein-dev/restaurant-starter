@@ -13,7 +13,7 @@ export const ImageBg = ({
         <img
           src={src}
           alt="background"
-          className="z-0 w-full h-full object-cover"
+          className="z-0 w-full h-full object-cover brightness-50"
           loading="eager"
         />
       </picture>

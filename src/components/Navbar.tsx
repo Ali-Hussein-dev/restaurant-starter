@@ -51,7 +51,7 @@ export const Navbar = () => {
         {({ open: isOpen }) => (
           <>
             <div className="container mx-auto">
-              <div className="h-16 row-center">
+              <div className="h-16 md:row-center row-between">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <Link href="/">
@@ -64,7 +64,7 @@ export const Navbar = () => {
                       />
                     </Link>
                   </div>
-                  <div className="hidden sm:block sm:ml-6 ">
+                  <div className="hidden sm:block sm:ml-6">
                     {/* //----------------------------------------------------------------------desktop */}
                     <LinksList />
                   </div>
