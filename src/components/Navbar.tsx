@@ -1,64 +1,31 @@
-import { BiChevronDown } from "react-icons/bi";
-import { ImGithub } from "react-icons/im";
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { Disclosure } from "@headlessui/react";
 import { useScroll } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import * as React from "react";
-
-//----------------------------------------------------------------------RightNavbarContent
-const RightNavbarContent = () => {
-  return (
-    <div className="gap-x-3 row-center">
-      <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn gap-1 bg-transparent btn-sm">
-          <BiChevronDown size="24" />
-          dropdown
-        </label>
-        <ul
-          tabIndex={0}
-          className="p-2 shadow dropdown-content menu bg-base-300 rounded-box w-52"
-        >
-          {[
-            { label: "item 1", href: "" },
-            { label: "item 2", href: "" },
-          ].map((item, i) => (
-            <li key={i}>
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <a
-        className="link "
-        href="https://github.com/Ali-Hussein-dev/website-starter"
-      >
-        <span className="sr-only">Github repo</span>
-        <ImGithub size="30" />
-      </a>
-    </div>
-  );
-};
+import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 const links = [
-  { label: "Section 1", href: "#section1" },
-  { label: "Section 2", href: "#section2" },
-  { label: "Section 3", href: "#section3" },
-  { label: "Section 4", href: "#section4" },
+  { label: "home", href: "#home" },
+  { label: "gallery", href: "#section2" },
+  { label: "menu", href: "#section3" },
+  { label: "about", href: "#section4" },
 ];
 //----------------------------------------------------------------------LinksList
 const LinksList = () => {
+  const { t } = useTranslation("common");
   return (
-    <div className="flex flex-col md:flex-row md:space-x-4">
+    <div className="flex flex-col md:flex-row md:gap-x-10">
       {links.map((link, i) => (
         <ScrollLink
           to={link.href}
           activeClass="active"
           smooth
           key={i}
-          className="btn font-bold bg-transparent border-none text-slate-100 btn-sm"
+          className="btn text-lg font-bold bg-transparent border-none text-slate-100 btn-sm"
         >
-          {link.label}
+          {t(link.label)}
         </ScrollLink>
       ))}
     </div>
@@ -84,25 +51,22 @@ export const Navbar = () => {
         {({ open: isOpen }) => (
           <>
             <div className="container mx-auto">
-              <div className="h-16 row-between">
+              <div className="h-16 row-center">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <Link href="/">
-                      <picture>
-                        <source></source>
-                        <img
-                          className="block w-auto h-12"
-                          src="/logo.png"
-                          alt="logo"
-                        />
-                      </picture>
+                      <Image
+                        className="block w-auto h-12"
+                        src="/logo.png"
+                        alt="logo"
+                        width={50}
+                        height={50}
+                      />
                     </Link>
                   </div>
-                  <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-4">
-                      {/* //----------------------------------------------------------------------desktop */}
-                      <LinksList />
-                    </div>
+                  <div className="hidden sm:block sm:ml-6 ">
+                    {/* //----------------------------------------------------------------------desktop */}
+                    <LinksList />
                   </div>
                 </div>
                 {/* //----------------------------------------------------------------------mobile */}
@@ -127,16 +91,11 @@ export const Navbar = () => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="hidden md:block">
-                  <RightNavbarContent />
-                </div>
               </div>
             </div>
             <Disclosure.Panel className="py-2 sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 ">
                 <LinksList />
-                <div className="divider" />
-                <RightNavbarContent />
               </div>
             </Disclosure.Panel>
           </>

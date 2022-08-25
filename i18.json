@@ -1,0 +1,7 @@
+{
+  "locales": ["en-US", "ar"],
+  "defaultLocale": "en-US",
+  "pages": {
+    "*": ["common"]
+  }
+}
