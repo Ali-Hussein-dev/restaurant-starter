@@ -99,7 +99,7 @@ export const Footer = () => {
             ))}
           </div>
         </footer> */}
-        <footer className="container px-2 pt-5 pb-10 border-t md:px-4 border-base-100 footer row-between">
+        <footer className="px-2 pt-5 pb-8 border-t border-gray-500 md:flex-row md:justify-between gap-y-3 md:px-4 footer col-center ">
           <div className="items-center grid-flow-col">
             <p className="text-lg font-bold">
               @<time>{new Date().getFullYear()}</time> Your Restaurant
