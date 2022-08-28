@@ -5,10 +5,14 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: { max: "639px" },
+      },
+    },
   },
   daisyui: {
-    themes: ["dark"],
+    themes: ["black"],
   },
 
   plugins: [require("daisyui")],
