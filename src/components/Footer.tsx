@@ -1,8 +1,16 @@
 import * as React from "react";
+import useTranslation from "next-translate/useTranslation";
 import { BsInstagram, BsYoutube, BsFacebook } from "react-icons/bs";
-import Link from "next/link";
+import { FaTripadvisor } from "react-icons/fa";
+// import Link from "next/link";
+
 const links = {
   social: [
+    {
+      name: "tripadvisor",
+      icon: FaTripadvisor,
+      href: "https://tripadvisor.com",
+    },
     {
       name: "instagram",
       icon: BsInstagram,
@@ -20,6 +28,10 @@ const links = {
     },
   ],
   legal: [
+    {
+      href: "https://www.google.com",
+      label: "Imprint",
+    },
     {
       href: "https://www.google.com",
       label: "Privacy Policy",
@@ -51,45 +63,17 @@ const links = {
       label: "Press kit",
     },
   ],
-  services: [
-    {
-      href: "https://www.google.com",
-      label: "Branding",
-    },
-    {
-      href: "https://www.google.com",
-      label: "Design",
-    },
-    {
-      href: "https://www.google.com",
-      label: "Marketing",
-    },
-    {
-      href: "https://www.google.com",
-      label: "Advertisement",
-    },
-  ],
 };
+
 //======================================
 export const Footer = () => {
   const dummyPage = "/dummy";
+  const { t } = useTranslation("common");
   //======================================return
   return (
-    <div className="">
-      <div className="container mx-auto border-t text-base-content border-slate-500 ">
-        <footer className="grid px-2 py-8 grid-cols-2 md:grid-cols-3 lg:px-2 footer">
-          <div>
-            <span className="footer-title">Services</span>
-            {links.services.map((link) => (
-              <Link
-                key={link.label}
-                href={dummyPage || link.href}
-                className="link link-hover"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+    <div className="relative ">
+      <div className="container mx-auto text-base-content">
+        {/* <footer className="grid px-2 py-5 grid-cols-2 text-xl md:grid-cols-4 footer">
           <div>
             <span className="footer-title">Company</span>
             {links.company.map((link) => (
@@ -114,17 +98,23 @@ export const Footer = () => {
               </Link>
             ))}
           </div>
-        </footer>
-        <footer className="px-2 pt-5 pb-10 border-t border-base-300 footer row-between">
+        </footer> */}
+        <footer className="container px-2 pt-5 pb-10 border-t md:px-4 border-base-100 footer row-between">
           <div className="items-center grid-flow-col">
-            <p className="font-bold">Your Company Ltd.</p>
+            <p className="text-lg font-bold">
+              @<time>{new Date().getFullYear()}</time> Your Restaurant
+            </p>
           </div>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
               {links.social.map((item) => (
-                <a href={item.href} key={item.name} className="link link-hover">
+                <a
+                  href={item.href}
+                  key={item.name}
+                  className="link link-hover text-slate-300"
+                >
                   <span className="sr-only">{item.name}</span>
-                  <item.icon size="20" />
+                  <item.icon size="25" />
                 </a>
               ))}
             </div>
