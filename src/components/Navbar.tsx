@@ -8,22 +8,22 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 const links = [
   { label: "home", href: "#home" },
-  { label: "gallery", href: "#section2" },
+  { label: "gallery", href: "#gallery" },
   { label: "menu", href: "#section3" },
-  { label: "about", href: "#section4" },
+  { label: "contact", href: "#contact" },
 ];
 //----------------------------------------------------------------------LinksList
 const LinksList = () => {
   const { t } = useTranslation("common");
   return (
-    <div className="flex flex-col md:flex-row md:gap-x-10">
+    <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-10 lg:gap-x-20">
       {links.map((link, i) => (
         <ScrollLink
           to={link.href}
           activeClass="active"
           smooth
           key={i}
-          className="btn text-lg font-bold bg-transparent border-none text-slate-100 btn-sm"
+          className="btn text-lg font-bold uppercase bg-transparent border-none text-slate-100 btn-sm"
         >
           {t(link.label)}
         </ScrollLink>
@@ -53,7 +53,7 @@ export const Navbar = () => {
             <div className="container mx-auto">
               <div className="h-16 md:row-center row-between">
                 <div className="flex items-center">
-                  <div className="flex-shrink-0">
+                  {/* <div className="flex-shrink-0">
                     <Link href="/">
                       <Image
                         className="block w-auto h-12"
@@ -63,7 +63,7 @@ export const Navbar = () => {
                         height={50}
                       />
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="hidden sm:block sm:ml-6">
                     {/* //----------------------------------------------------------------------desktop */}
                     <LinksList />

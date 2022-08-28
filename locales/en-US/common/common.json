@@ -4,5 +4,14 @@
     "gallery": "Gallery",
     "menu": "menu",
     "about": "About"
+  },
+  "days": {
+    "mon": "mon",
+    "tue": "tue",
+    "wed": "wed",
+    "thu": "thu",
+    "fri": "fri",
+    "sam": "sam",
+    "sun": "sun"
   }
 }
