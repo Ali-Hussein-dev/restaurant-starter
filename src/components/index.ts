@@ -4,3 +4,5 @@ export * from "./Navbar";
 export * from "./Layout";
 export * from "./Section";
 export * from "./Hero";
+export * from "./ContactInfo";
+export * from "./OpeningHours";
