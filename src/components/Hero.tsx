@@ -5,15 +5,22 @@ export const Hero = () => {
   //======================================return
   return (
     <Section id="#home">
-      <div className="grid w-full place-items-center lg:place-items-start h-80 xs:px-1">
-        <div className="space-y-1 text-center rounded-3xl text-white z-[1] px-4 w-full md:w-auto  py-20">
-          <h1 className="mb-2 text-3xl font-extrabold md:text-5xl">
+      <div className="w-full px-1 lg:row-start row-center h-80 ">
+        <div className="space-y-1 text-center rounded-3xl lg:mb-32 mb-20 text-white z-[1] px-4 w-full  md:w-auto  py-20">
+          <h1 className="mb-2 text-4xl font-extrabold md:text-6xl">
             Syrian Restaurant
-            <span className="block mt-1"> With Feine Dishes in Hamburg</span>
+            <span className="block mt-1"> With Feine Dishes </span>
+            <span className="block mt-1">in Hamburg</span>
           </h1>
-          <h2 className="text-2xl">Address</h2>
+          <button
+            type="button"
+            // className="px-2 text-2xl rounded-lg bg-gradient-to-r from-stone-400 to-yello-400"
+            className="text-2xl"
+          >
+            Address
+          </button>
         </div>
-        <ImageBg />
+        <ImageBg loading="eager" />
       </div>
     </Section>
   );
