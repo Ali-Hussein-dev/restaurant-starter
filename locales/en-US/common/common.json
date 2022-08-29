@@ -2,9 +2,11 @@
   "navbar": {
     "home": "Home",
     "gallery": "Gallery",
-    "menu": "menu",
+    "menu": "Menu",
+    "contact": "Contact",
     "about": "About"
   },
+  "openingHours": { "title": "Opening Hours" },
   "days": {
     "mon": "mon",
     "tue": "tue",
@@ -13,5 +15,11 @@
     "fri": "fri",
     "sam": "sam",
     "sun": "sun"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "description": "Description",
+    "submit": "Send a messgage"
   }
 }

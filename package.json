@@ -14,6 +14,7 @@
     "daisyui": "^2.22.0",
     "framer-motion": "^7.0.0",
     "next": "12.2.4",
+    "next-compose-plugins": "^2.2.1",
     "next-translate": "^1.5.0",
     "nextjs-progressbar": "^0.0.14",
     "react": "18.2.0",
