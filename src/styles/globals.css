@@ -52,9 +52,9 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-700;
+  @apply bg-black;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-lg shadow-inner bg-slate-50/10 hover:bg-slate-100/20;
+  @apply rounded-lg shadow-inner bg-white/20 hover:bg-white/40;
 }
