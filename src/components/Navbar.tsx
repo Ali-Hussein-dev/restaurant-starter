@@ -14,7 +14,7 @@ const links = [
 ];
 //----------------------------------------------------------------------LinksList
 const LinksList = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-10 lg:gap-x-20">
       {links.map((link, i) => (
@@ -25,7 +25,7 @@ const LinksList = () => {
           key={i}
           className="btn text-lg font-bold uppercase bg-transparent border-none text-slate-100 btn-sm"
         >
-          {t(link.label)}
+          {t(`navbar.${link.label}`)}
         </ScrollLink>
       ))}
     </div>
