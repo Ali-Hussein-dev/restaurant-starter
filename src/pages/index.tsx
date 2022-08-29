@@ -6,6 +6,7 @@ import {
   Contact,
   GridLayout,
   Section,
+  Form,
 } from "../components";
 import * as React from "react";
 import Image from "next/image";
@@ -22,10 +23,8 @@ const Home: NextPage = () => {
   return (
     <Layout title="Restaurant Starter">
       <Hero />
-      {/* <Section id="#section3">
-        <h2 className="text-2xl">Menu</h2>
-      </Section> */}
       <Gallery />
+      <Form />
       <Section id="#menu">
         <div className="w-full p-4 mx-auto lg:w-4/6">
           <h2 className="h2">Our Top Dishes</h2>
