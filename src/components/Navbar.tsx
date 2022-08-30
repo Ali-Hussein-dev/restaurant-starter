@@ -44,7 +44,7 @@ export const Navbar = () => {
       <Disclosure
         as="nav"
         ref={() => ref}
-        className={`sticky top-0 px-2 z-10 ${
+        className={`sticky top-0 z-10 ${
           y > height ? "bg-slate-900/20 backdrop-blur-lg" : ""
         }`}
       >
@@ -64,7 +64,7 @@ export const Navbar = () => {
                       />
                     </Link>
                   </div> */}
-                  <div className="hidden sm:block sm:ml-6">
+                  <div className="xs:hidden">
                     {/* //----------------------------------------------------------------------desktop */}
                     <LinksList />
                   </div>
@@ -93,7 +93,7 @@ export const Navbar = () => {
                 </div>
               </div>
             </div>
-            <Disclosure.Panel className="py-2 sm:hidden">
+            <Disclosure.Panel className="py-2 sm:hidden bg-base-100/90">
               <div className="px-2 pt-2 pb-3 space-y-1 ">
                 <LinksList />
               </div>
