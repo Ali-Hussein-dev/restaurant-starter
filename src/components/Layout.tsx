@@ -16,11 +16,9 @@ export const Layout = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Navbar />
+      <main className="px-1">{children}</main>
+      <Footer />
     </>
   );
 };

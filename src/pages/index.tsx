@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <Gallery />
       <Form />
       <Section id="#menu">
-        <div className="w-full p-4 mx-auto lg:w-4/6">
+        <div className="w-full mx-auto lg:w-4/6">
           <h2 className="h2">Our Top Dishes</h2>
           <GridLayout
             items={gridItems.map((src, i) => (
