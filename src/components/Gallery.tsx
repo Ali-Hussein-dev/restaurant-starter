@@ -24,8 +24,8 @@ export const Gallery = () => {
   );
 };
 
-type TabsPropsT = {
-  labels: string[];
-  panels: React.ReactNode[];
-};
-const tabs = ({ labels, panels }: TabsPropsT) => {};
+// type TabsPropsT = {
+//   labels: string[];
+//   panels: React.ReactNode[];
+// };
+// const tabs = ({ labels, panels }: TabsPropsT) => {};
