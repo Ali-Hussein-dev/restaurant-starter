@@ -1,23 +1,23 @@
 import Image from "next/image";
 import * as React from "react";
-import { Autoplay, EffectFade, Pagination } from "swiper";
+import { Autoplay, EffectCards, EffectCreative, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { isMobile } from "react-device-detect";
 
 //======================================
 export const Carousel = ({ images }: { images: { src: string }[] }) => {
   //======================================return
   return (
     <Swiper
-      modules={[Autoplay, EffectFade, Pagination]}
+      modules={[Autoplay, EffectCards, Pagination, EffectCreative]}
       autoplay
-      effect="fade"
+      effect={isMobile ? "creative" : "cards"}
       pagination={{
         clickable: true,
         dynamicBullets: true,
-        //   position: "1",
         dynamicMainBullets: 5,
       }}
-      className="w-full lg:w-4/6"
+      className="w-full lg:w-4/6 mx-auto"
     >
       {images.map((img, i) => (
         <SwiperSlide key={i} className="mx-auto md:aspect-video aspect-square">
