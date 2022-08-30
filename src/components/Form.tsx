@@ -8,10 +8,10 @@ export const Form = () => {
   const { t } = useTranslation();
   //======================================return
   return (
-    <Section id="#from">
-      <div>
+    <section id="#from" className="grid py-28 element place-items-center">
+      <div className="border-l-8 border py-14 rounded-sm px-3">
         <div className="col-center gap-y-10 md:flex-row md:justify-between md:gap-x-14 px-6 max-w-5xl h-4/6 pt-4">
-          <div className="p-16 bg-base-300/70 rounded-[25%_75%_75%_25%_/_80%_27%_73%_20%]">
+          <div className="p-16 bg-base-300/80 rounded-[25%_75%_75%_25%_/_80%_27%_73%_20%]">
             <div className="relative aspect-square h-52">
               <Image
                 layout="fill"
@@ -23,14 +23,14 @@ export const Form = () => {
           </div>
 
           <div className="space-y-2">
-            <div>
-              <h3 className="h3 mb-2">Get in Touch</h3>
-              <p className="">
+            <div className="mb-4">
+              <h3 className="h3 mb-2 text-primary">Get in Touch</h3>
+              <p className="text-center w-10/12 mx-auto">
                 Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-                adipisci expedita at voluptas atque vitae autem.
+                adipisci expedita at atque vitae autem.
               </p>
             </div>
-            <div className="row-center  gap-x-2">
+            <div className="row-center gap-x-2">
               <input
                 type="text"
                 placeholder={t("form.name")}
@@ -48,13 +48,13 @@ export const Form = () => {
             ></textarea>
             <button
               type="submit"
-              className="btn w-full rounded bg-transparent border-none text-xl"
+              className="btn w-full rounded bg-transparent border-none text-xl uppercase"
             >
               {t("form.submit")}
             </button>
           </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
