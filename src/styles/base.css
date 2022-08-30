@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg shadow-inner bg-white/20 hover:bg-white/40;
+}

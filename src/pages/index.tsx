@@ -7,6 +7,7 @@ import {
   GridLayout,
   Section,
   Form,
+  Card,
 } from "../components";
 import * as React from "react";
 import Image from "next/image";
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
   return (
     <Layout title="Restaurant Starter">
       <Hero />
+      <Card />
       <Gallery />
       <Form />
       <Section id="#menu">

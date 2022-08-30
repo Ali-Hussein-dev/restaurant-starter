@@ -13,3 +13,4 @@ export * from "./OpeningHours";
 export * from "./Contact";
 export * from "./GridLayout";
 export * from "./Form";
+export * from "./Card";
