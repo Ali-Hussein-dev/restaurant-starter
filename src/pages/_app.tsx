@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/main.css";
 import type { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
 // Import Swiper styles

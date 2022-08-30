@@ -1,0 +1,11 @@
+/* base */
+@import "./tw/base.css";
+@import "./custom/base.css";
+
+/* components */
+@import "./tw/components.css";
+@import "./custom/components/flex.css";
+@import "./custom/components/typography.css";
+
+/* utilities */
+@import "./tw/utilities.css";
