@@ -25,7 +25,7 @@ export const Form = () => {
           <div className="space-y-2">
             <div className="mb-4">
               <h3 className="h3 mb-2 text-primary">Get in Touch</h3>
-              <p className="text-center w-10/12 mx-auto">
+              <p className="text-center md:w-10/12 w-11/12 mx-auto">
                 Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
                 adipisci expedita at atque vitae autem.
               </p>
