@@ -26,7 +26,7 @@ export const OpeningHours = () => {
                 : ""
             }  w-full text-lg  px-2 py-1 rounded-sm`}
           >
-            <span className="uppercase">{t(day.label)}:</span>
+            <span className="uppercase">{t(`days.${day.label}`)}:</span>
             {day.off ? (
               <span className="uppercase ">closed</span>
             ) : (
