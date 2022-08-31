@@ -23,7 +23,7 @@ const LinksList = () => {
           activeClass="active"
           smooth
           key={i}
-          className="btn text-lg font-bold uppercase bg-transparent border-none text-slate-100 btn-sm"
+          className="btn text-lg font-bold uppercase bg-transparent border-none btn-sm"
         >
           {t(`navbar.${link.label}`)}
         </ScrollLink>
