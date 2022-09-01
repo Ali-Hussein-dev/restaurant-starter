@@ -7,7 +7,7 @@ import useTranslation from "next-translate/useTranslation";
 const links = [
   { label: "home", href: "#home" },
   { label: "gallery", href: "#gallery" },
-  { label: "menu", href: "#section3" },
+  { label: "menu", href: "#menu" },
   { label: "contact", href: "#contact" },
 ];
 //----------------------------------------------------------------------LinksList
