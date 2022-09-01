@@ -2,10 +2,8 @@ import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { Disclosure } from "@headlessui/react";
 import { useScroll } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
 import * as React from "react";
 import useTranslation from "next-translate/useTranslation";
-import Image from "next/image";
 const links = [
   { label: "home", href: "#home" },
   { label: "gallery", href: "#gallery" },

@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "home": "Home",
+    "gallery": "Gallerie",
+    "menu": "Menü",
+    "contact": "Kontakt",
+    "about": "Über"
+  },
+  "openingHours": { "title": "Öffnungszeiten" },
+  "days": {
+    "mon": "Mon",
+    "tue": "Die",
+    "wed": "Mit",
+    "thu": "Don",
+    "fri": "Fre",
+    "sam": "Sam",
+    "sun": "Son"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "description": "Beschreibung",
+    "submit": "Abschicken"
+  }
+}
