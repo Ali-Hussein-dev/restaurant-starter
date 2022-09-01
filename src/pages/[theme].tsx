@@ -27,7 +27,6 @@ const Theme: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Restaurant Starter" theme={theme}>
-      {theme}
       <Hero />
       <Gallery />
       <Form />
