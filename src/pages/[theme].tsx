@@ -10,6 +10,8 @@ import {
 } from "../components";
 import * as React from "react";
 import Image from "next/image";
+import { themes } from "../utils/themes-list";
+
 const gridItems = [
   "/menu/1.jpg",
   "/menu/2.jpg",
@@ -19,9 +21,10 @@ const gridItems = [
   "/menu/6.jpg",
 ];
 //----------------------------------------------------------------------
-const Home: NextPage = () => {
+const Theme: NextPage = ({ theme }: { theme: string }) => {
   return (
-    <Layout title="Restaurant Starter" theme="night">
+    <Layout title="Restaurant Starter" theme={theme}>
+      {theme}
       <Hero />
       <Gallery />
       <Form />
@@ -46,4 +49,13 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Theme;
+export function getStaticPaths() {
+  const paths = themes.map((theme) => ({ params: { theme } }));
+  return { paths, fallback: false };
+}
+
+export function getStaticProps(ctx) {
+  const { theme } = ctx.params;
+  return { props: { theme } };
+}
