@@ -8,8 +8,8 @@ export const Form = () => {
   const { t } = useTranslation();
   //======================================return
   return (
-    <section id="#from" className=" py-28 element px-1">
-      <div className="border-l-8 border-b-8 border py-14 rounded-sm px-3 lg:w-4/6 mx-auto">
+    <section id="#from" className=" py-28 element px-1 ">
+      <div className="border-l-8 border-b-8 border py-14 rounded-sm px-3 lg:w-4/6 mx-auto bg-base-200">
         <div className="col-center gap-y-10 md:flex-row md:justify-between md:gap-x-14 px-6 max-w-4xl h-4/6 pt-4">
           <div className="p-16 bg-base-300/80 rounded-[25%_75%_75%_25%_/_80%_27%_73%_20%]">
             <div className="relative aspect-square h-52">
@@ -34,7 +34,7 @@ export const Form = () => {
               <input
                 type="text"
                 placeholder={t("form.name")}
-                className="rounded input input-bordered w-full "
+                className="rounded input input-bordered w-full"
               />
               <input
                 type="email"
