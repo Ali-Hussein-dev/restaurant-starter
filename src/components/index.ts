@@ -12,4 +12,7 @@ export * from "./ContactInfo";
 export * from "./OpeningHours";
 export * from "./Contact";
 export * from "./GridLayout";
+export * from "./masonry-layout";
 export * from "./Form";
+export * from "./Tabs";
+export * from "./menu-tabs";

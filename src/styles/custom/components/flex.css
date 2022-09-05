@@ -12,6 +12,12 @@
   .row-between {
     @apply flex items-center justify-between;
   }
+  .row-around {
+    @apply flex items-center justify-around;
+  }
+  .row-evenly {
+    @apply flex items-center justify-evenly;
+  }
 
   /* column */
   .f-col {
