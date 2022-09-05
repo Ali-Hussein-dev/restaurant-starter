@@ -8,9 +8,9 @@ export const Form = () => {
   const { t } = useTranslation();
   //======================================return
   return (
-    <section id="#from" className=" py-28 element px-1 ">
-      <div className="border-l-8 border-b-8 border py-14 rounded-sm px-3 lg:w-4/6 mx-auto bg-base-200">
-        <div className="col-center gap-y-10 md:flex-row md:justify-between md:gap-x-14 px-6 max-w-4xl h-4/6 pt-4">
+    <section id="#form" className="px-1  py-28 element">
+      <div className="px-3 mx-auto border border-b-8 border-l-8 rounded-sm py-14 lg:w-4/6 bg-base-200">
+        <div className="max-w-4xl px-6 pt-4 col-center gap-y-10 md:flex-row md:justify-between md:gap-x-14 h-4/6">
           <div className="p-16 bg-base-300/80 rounded-[25%_75%_75%_25%_/_80%_27%_73%_20%]">
             <div className="relative aspect-square h-52">
               <Image
@@ -24,8 +24,8 @@ export const Form = () => {
 
           <div className="space-y-2">
             <div className="mb-4">
-              <h3 className="h3 mb-2 text-primary">Get in Touch</h3>
-              <p className="text-center md:w-10/12 w-11/12 mx-auto">
+              <h3 className="mb-2 h3 text-primary">Get in Touch</h3>
+              <p className="w-11/12 mx-auto text-center md:w-10/12">
                 Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
                 adipisci expedita at atque vitae autem.
               </p>
@@ -34,21 +34,21 @@ export const Form = () => {
               <input
                 type="text"
                 placeholder={t("form.name")}
-                className="rounded input input-bordered w-full"
+                className="w-full rounded input input-bordered"
               />
               <input
                 type="email"
                 placeholder={t("form.email")}
-                className="rounded input input-bordered w-full "
+                className="w-full rounded input input-bordered "
               />
             </div>
             <textarea
-              className="rounded textarea textarea-bordered w-full"
+              className="w-full rounded textarea textarea-bordered"
               placeholder={t("form.description")}
             ></textarea>
             <button
               type="submit"
-              className="btn w-full rounded bg-transparent border-none text-xl uppercase"
+              className="btn w-full text-xl uppercase bg-transparent border-none rounded"
             >
               {t("form.submit")}
             </button>
