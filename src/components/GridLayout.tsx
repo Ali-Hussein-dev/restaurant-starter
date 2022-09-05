@@ -24,12 +24,7 @@ export const GridLayout = <T extends React.ReactNode>({
     <div className="container mx-auto col-center">
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
         {items.map((item, i) => (
-          <div
-            key={i}
-            className={
-              "w-full shadow aspect-square rounded-sm overflow-hidden relative"
-            }
-          >
+          <div key={i} className="w-full">
             {item}
           </div>
         ))}

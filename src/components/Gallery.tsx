@@ -17,7 +17,7 @@ const images = [
 export const Gallery = () => {
   //======================================return
   return (
-    <section id="#gallery" className="w-full element">
+    <section id="#gallery" className="w-full px-2 element">
       <h2 className="mb-8 h2">Our Premises</h2>
       <Carousel images={images} />
     </section>
