@@ -1,7 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Gallery, Hero, Layout, Contact, Form, MenuTabs } from "../components";
 import * as React from "react";
-import Image from "next/image";
 import { themes } from "../utils/themes-list";
 import { InferGetStaticPropsType } from "next";
 import { ParsedUrlQuery } from "querystring";
