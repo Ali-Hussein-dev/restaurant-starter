@@ -1,3 +1,5 @@
+const themesConfigs = require("./src/utils/themes-configs");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,6 +13,8 @@ module.exports = {
       },
     },
   },
-
+  daisyui: {
+    themes: themesConfigs,
+  },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };

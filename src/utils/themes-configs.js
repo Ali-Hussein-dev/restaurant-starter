@@ -1,6 +1,6 @@
-export const themes = [
+module.exports = [
+  "dark", // first theme is the default theme
   "light",
-  "dark",
   "cupcake",
   "bumblebee",
   "emerald",
@@ -28,6 +28,17 @@ export const themes = [
   "night",
   "coffee",
   "winter",
-  // custom
-  "pinky",
-] as const;
+  {
+    pinky: {
+      primary: "#e63946",
+      secondary: "#a8dadc",
+      accent: "#1d3557",
+      neutral: "#f1faee",
+      "base-100": "#FFFFFF",
+      info: "#1d3557",
+      success: "#18B473",
+      warning: "#ee9b00",
+      error: "#d00000",
+    },
+  },
+];
