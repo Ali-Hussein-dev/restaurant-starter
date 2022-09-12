@@ -1,23 +1,31 @@
 import { MdEmail } from "react-icons/md";
 import { HiOutlineDeviceMobile } from "react-icons/hi";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import { useRestCtx } from "../hooks";
 
 export const ContactInfo = () => {
+  const {
+    contact: { address, contactInfo },
+  } = useRestCtx();
   return (
     <div className="text-lg rounded-sm gap-y-5 col-center text-slate-200 ">
-      <span className="text-2xl font-bold uppercase">Contact Info</span>
+      <span className="pb-1 text-2xl font-bold uppercase border-b">
+        {contactInfo.title}
+      </span>
       <div className="col-center">
         <FaMapMarkedAlt size="30" className="text-slate-300" />
-        <span>SeelaStaße 20a </span>
-        <span>Hamburg, 20202</span>
+        <span>{address.street}</span>
+        <span>
+          {address.city} {address.zipcode}
+        </span>
       </div>
       <div className="col-center">
         <HiOutlineDeviceMobile size="30" className="text-slate-300" />
-        <a href={`tel:+98234798237489234`}>+49 40 5000 45 32</a>
+        <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
       </div>
       <div className="col-center">
         <MdEmail size="30" className="text-slate-300" />
-        <a href={`mailto:info@test.com`}>info@restaurant.com</a>
+        <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
       </div>
     </div>
   );
