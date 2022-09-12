@@ -1,12 +1,7 @@
 import * as React from "react";
 import { Carousel } from ".";
+import { useRestCtx } from "../hooks";
 
-const images = [
-  { src: "/gallery/1.jpeg" },
-  { src: "/gallery/2.jpeg" },
-  { src: "/gallery/3.jpeg" },
-  { src: "/gallery/4.jpeg" },
-];
 /**
  * with Tabs
  * labels: eg. terrace, inside, outside
@@ -15,10 +10,13 @@ const images = [
  */
 //======================================
 export const Gallery = () => {
+  const {
+    gallery: { images, title },
+  } = useRestCtx();
   //======================================return
   return (
     <section id="#gallery" className="w-full px-2 element">
-      <h2 className="mb-8 h2">Our Premises</h2>
+      <h2 className="mb-8 h2">{title}</h2>
       <Carousel images={images} />
     </section>
   );

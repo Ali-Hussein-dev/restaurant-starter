@@ -2,9 +2,14 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import * as React from "react";
 import { Section } from ".";
+import { useRestCtx } from "../hooks";
+import { ContactFormT } from "../types/restaurant";
 
 //======================================
 export const Form = () => {
+  const {
+    contactForm: { title, description },
+  } = useRestCtx();
   const { t } = useTranslation();
   //======================================return
   return (
@@ -27,11 +32,8 @@ export const Form = () => {
 
           <div className="space-y-2">
             <div className="mb-4">
-              <h3 className="mb-2 h3 text-primary">Get in Touch</h3>
-              <p className="mx-auto text-center md:w-10/12">
-                Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-                adipisci expedita at atque vitae autem.
-              </p>
+              <h3 className="mb-2 h3 text-primary">{title}</h3>
+              <p className="mx-auto text-center md:w-10/12">{description}</p>
             </div>
             <div className="row-center gap-x-2">
               <input

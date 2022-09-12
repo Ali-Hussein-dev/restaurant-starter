@@ -2,31 +2,9 @@ import * as React from "react";
 import useTranslation from "next-translate/useTranslation";
 import { BsInstagram, BsYoutube, BsFacebook } from "react-icons/bs";
 import { FaTripadvisor } from "react-icons/fa";
-// import Link from "next/link";
+import { useRestCtx } from "../hooks";
 
-const links = {
-  social: [
-    {
-      name: "tripadvisor",
-      icon: FaTripadvisor,
-      href: "https://tripadvisor.com",
-    },
-    {
-      name: "instagram",
-      icon: BsInstagram,
-      href: "https://www.instagram.com",
-    },
-    {
-      name: "facebook",
-      icon: BsFacebook,
-      href: "https://www.facebook.com",
-    },
-    {
-      name: "youtube",
-      icon: BsYoutube,
-      href: "https://www.youtube.com",
-    },
-  ],
+const _links = {
   legal: [
     {
       href: "https://www.google.com",
@@ -65,10 +43,23 @@ const links = {
   ],
 };
 
+const icons = {
+  instagram: BsInstagram,
+  facebook: BsFacebook,
+  youtube: BsYoutube,
+  tripadvisor: FaTripadvisor,
+};
+const Icon = ({ name }: { name: keyof typeof icons }) => {
+  const ReactIcon = icons[name];
+  return <ReactIcon size="20" />;
+};
 //======================================
 export const Footer = () => {
-  const dummyPage = "/dummy";
   const { t } = useTranslation("common");
+  const {
+    footer: { links, name },
+  } = useRestCtx();
+  console.log(links, name);
   //======================================return
   return (
     <div className="relative ">
@@ -99,24 +90,26 @@ export const Footer = () => {
             ))}
           </div>
         </footer> */}
-        <footer className="px-2 pt-5 pb-8 border-t border-gray-500 md:flex-row md:justify-between gap-y-3 md:px-4 footer col-center ">
+        <footer className="px-1 pt-4 pb-8 border-t border-gray-500 md:flex-row md:justify-between gap-y-3 footer col-center ">
           <div className="items-center grid-flow-col">
             <p className="text-lg font-bold">
-              @<time>{new Date().getFullYear()}</time> Your Restaurant
+              @<time>{new Date().getFullYear()}</time> {name}
             </p>
           </div>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
-              {links.social.map((item) => (
-                <a
-                  href={item.href}
-                  key={item.name}
-                  className="link link-hover text-slate-300"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon size="25" />
-                </a>
-              ))}
+              {links.social.map((item) => {
+                return (
+                  <a
+                    href={item.href}
+                    key={item.name}
+                    className="link link-hover text-slate-300"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <Icon name={item.name as keyof typeof icons} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </footer>

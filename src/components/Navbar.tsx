@@ -4,14 +4,12 @@ import { useScroll } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import * as React from "react";
 import useTranslation from "next-translate/useTranslation";
-const links = [
-  { label: "home", href: "#home" },
-  { label: "gallery", href: "#gallery" },
-  { label: "menu", href: "#menu" },
-  { label: "contact", href: "#contact" },
-];
+import { useRestCtx } from "../hooks";
 //----------------------------------------------------------------------LinksList
 const LinksList = () => {
+  const {
+    header: { links },
+  } = useRestCtx();
   const { t } = useTranslation();
   return (
     <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-10 lg:gap-x-20">
