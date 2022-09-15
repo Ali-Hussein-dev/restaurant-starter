@@ -1,5 +1,15 @@
 //------------------------------type-utils
-export type ImagesListT = { src: string }[];
+
+export type ProductT = {
+  src: string;
+  name?: string;
+  body?: string;
+  price?: number;
+  isVegan?: boolean;
+  isVegi?: boolean;
+  isHalal?: boolean;
+  isSpicy?: boolean;
+};
 
 export interface HeroT {
   h1: string;
@@ -11,7 +21,7 @@ export interface HeroT {
 
 export interface GalleryT {
   title: string;
-  images: ImagesListT;
+  products: ProductT[];
 }
 export type OpeningHoursT = {
   from: `${string}:${string}`;
@@ -48,12 +58,16 @@ export interface ContactFormT {
 
 interface MenuT {
   label: string;
-  images: ImagesListT;
+  products: ProductT[];
 }
 
 export type MenuTabsT = {
   title: string;
   list: MenuT[];
+  /**
+   * href for the menu
+   */
+  href?: string;
 };
 
 export interface HeaderT {

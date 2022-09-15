@@ -11,19 +11,13 @@ import { useRestCtx } from "../hooks";
 //======================================
 export const Gallery = () => {
   const {
-    gallery: { images, title },
+    gallery: { products, title },
   } = useRestCtx();
   //======================================return
   return (
     <section id="#gallery" className="w-full px-2 element">
       <h2 className="mb-8 h2">{title}</h2>
-      <Carousel images={images} />
+      <Carousel images={products} />
     </section>
   );
 };
-
-// type TabsPropsT = {
-//   labels: string[];
-//   panels: React.ReactNode[];
-// };
-// const tabs = ({ labels, panels }: TabsPropsT) => {};

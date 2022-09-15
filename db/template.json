@@ -7,7 +7,7 @@
   },
   "gallery": {
     "title": "Our Premises",
-    "images": [
+    "products": [
       { "src": "/gallery/1.jpeg" },
       { "src": "/gallery/2.jpeg" },
       { "src": "/gallery/3.jpeg" },
