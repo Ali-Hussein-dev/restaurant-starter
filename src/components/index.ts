@@ -15,3 +15,5 @@ export * from "./GridLayout";
 export * from "./Form";
 export * from "./Tabs";
 export * from "./menu-tabs";
+export * from "./card";
+export * from "./svg-icon";
