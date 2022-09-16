@@ -79,6 +79,7 @@ export interface FooterT {
   name: string;
 }
 export interface RestaurantCtxT {
+  theme: string;
   name: string;
   hero: HeroT;
   contact: ContactT;

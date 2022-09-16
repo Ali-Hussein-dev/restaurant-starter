@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import * as React from "react";
 import Link from "next/link";
 const gridItems = [
-  { href: "/template?theme=black", label: "template" },
+  { href: "/template", label: "template" },
   {
-    href: "/template-2?theme=autumn",
+    href: "/template-2",
     label: "template 2",
   },
 ];
