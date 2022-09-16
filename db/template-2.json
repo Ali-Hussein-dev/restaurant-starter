@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "h1": "Turkish Restaurant",
+    "h2": "With Feine Taste",
+    "cta": "Book a table",
+    "img": "/kebab-salad.jpg"
+  },
+  "gallery": {
+    "title": "Our Premises",
+    "products": [
+      { "src": "/gallery/1.jpeg" },
+      { "src": "/gallery/2.jpeg" },
+      { "src": "/gallery/3.jpeg" },
+      { "src": "/gallery/4.jpeg" }
+    ]
+  },
+  "contact": {
+    "title": "We're looking forward to your visit",
+    "bgImg": "/gallery/3.jpeg",
+    "openingHours": {
+      "title": "Opening Hours",
+      "times": [
+        { "num": 1, "label": "mon", "off": true, "from": "", "to": "" },
+        { "num": 2, "label": "tue", "from": "12:00", "to": "22:00" },
+        { "num": 3, "label": "wed", "from": "12:00", "to": "22:00" },
+        { "num": 4, "label": "thu", "from": "12:00", "to": "22:00" },
+        { "num": 5, "label": "fri", "from": "12:00", "to": "22:00" },
+        { "num": 6, "label": "sam", "from": "10:00", "to": "23:00" },
+        { "num": 0, "label": "sun", "from": "10:00", "to": "21:00" }
+      ]
+    },
+    "address": {
+      "city": "hamburg",
+      "stree": "Burgerstr 230a",
+      "zipcode": 23434
+    },
+    "contactInfo": {
+      "title": "Contact Info",
+      "phone": "+46 100 1000 100",
+      "email": "info@restaurant.com"
+    }
+  },
+  "contactForm": {
+    "title": "Get in Touch",
+    "description": "Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at atque vitae autem."
+  },
+  "menuTabs": {
+    "title": "Our Top Dishes",
+    "list": [
+      {
+        "products": [
+          {
+            "name": "lorem 1",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/falafel.jpg",
+            "isVegi": true
+          },
+          {
+            "name": "lorem 2",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/hummus.jpg",
+            "isSpicy": true,
+            "isVegi": true
+          },
+          {
+            "name": "lorem 3",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/1.jpg",
+            "isVegan": true
+          },
+          {
+            "name": "lorem 4",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/3.jpg",
+            "isHalal": true
+          },
+          {
+            "name": "lorem 5",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/4.jpg",
+            "isHalal": true
+          },
+          {
+            "name": "lorem 6",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque.",
+            "price": 3.8,
+            "src": "/menu/5.jpg",
+            "isSpicy": true,
+            "isHalal": true
+          }
+        ],
+        "label": "Dishes"
+      },
+      {
+        "products": [
+          { "src": "/menu/baklava.jpg" },
+          { "src": "/menu/dates.jpg" },
+          { "src": "/menu/eastern-sweets.jpg" }
+        ],
+        "label": "Desserts"
+      },
+      {
+        "products": [
+          { "src": "/menu/coffee.jpg" },
+          { "src": "/menu/tea.jpg" },
+          { "src": "/menu/lemonade.jpg" },
+          { "src": "/menu/ayran.jpg" }
+        ],
+        "label": "Drinks"
+      }
+    ]
+  },
+  "header": {
+    "links": [
+      { "label": "home", "href": "#home" },
+      { "label": "gallery", "href": "#gallery" },
+      { "label": "menu", "href": "#menu" },
+      { "label": "contact", "href": "#contact" }
+    ]
+  },
+  "footer": {
+    "name": "Your Restaurant ",
+    "links": {
+      "social": [
+        {
+          "name": "tripadvisor",
+          "href": "https://tripadvisor.com"
+        },
+        {
+          "name": "instagram",
+          "href": "https://www.instagram.com"
+        },
+        {
+          "name": "facebook",
+          "href": "https://www.facebook.com"
+        }
+      ]
+    }
+  }
+}
