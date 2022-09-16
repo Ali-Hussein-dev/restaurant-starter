@@ -1,17 +1,21 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import * as React from "react";
 import { Navbar, Footer } from ".";
 import { themes } from "../utils/themes-list";
+
+export type ThemeNameT = typeof themes[number];
 //======================================
 export const Layout = ({
   children,
   title = "Website Starter",
-  theme = "black",
 }: {
   children: React.ReactNode;
   title?: string;
-  theme?: typeof themes[number];
 }) => {
+  const router = useRouter();
+  const url = new URL("https://placeholder.com/" + router.asPath);
+  const theme = url.searchParams.get("theme") || "black";
   //======================================return
   return (
     <div data-theme={theme}>
