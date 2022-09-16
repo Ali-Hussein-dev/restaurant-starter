@@ -1,21 +1,18 @@
-import { GridLayout, Tabs } from ".";
+import { Card, GridLayout, Tabs } from ".";
 import * as React from "react";
-import Image from "next/image";
-import { ImagesListT } from "../types/restaurant";
+import { ProductT } from "../types/restaurant";
 import { useRestCtx } from "../hooks";
-// import { CgChevronRightO } from "react-icons/cg";
-const Panel = ({ images }: { images: ImagesListT }) => {
+import { CgChevronRightO } from "react-icons/cg";
+
+const Panel = ({ products }: { products: ProductT[] }) => {
   return (
     <GridLayout
-      items={images.map((image, ii) => (
-        <div key={ii} className="relative aspect-video md:aspect-square">
-          <Image
-            layout="fill"
-            src={image.src}
-            alt="image"
-            className="object-cover rounded-2xl"
-          />
-        </div>
+      items={products.map((product) => (
+        <Card
+          key={product.name}
+          variant={product.name ? "with-text" : "no-text"}
+          {...product}
+        />
       ))}
     />
   );
@@ -24,7 +21,7 @@ const Panel = ({ images }: { images: ImagesListT }) => {
 //======================================
 export const MenuTabs = () => {
   const {
-    menuTabs: { list, title },
+    menuTabs: { list, title, href },
   } = useRestCtx();
   //======================================return
   return (
@@ -33,17 +30,22 @@ export const MenuTabs = () => {
       <div className="w-11/12 lg:w-8/12 ">
         <Tabs
           panels={list.map((obj) => (
-            <Panel images={obj.images} key={obj.label} />
+            <Panel products={obj.products} key={obj.label} />
           ))}
           tabButtons={list.map((tab) => ({ label: tab.label }))}
         />
       </div>
-      {/* <button
-        type="button"
-        className="btn my-2 text-xl normal-case gap-x-2 bg-base-300 row-center"
-      >
-        Complete Menu <CgChevronRightO className="mt-1 " />
-      </button> */}
+      {href && (
+        <a
+          href={href}
+          target="_blank"
+          type="button"
+          className="btn my-2 text-xl normal-case duration-500 gap-x-2 bg-base-300 row-center hover:scale-105"
+          rel="noreferrer"
+        >
+          Check Menu <CgChevronRightO className="mt-1 " />
+        </a>
+      )}
     </section>
   );
 };

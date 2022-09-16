@@ -1,4 +1,5 @@
 {
+  "theme": "luxury",
   "hero": {
     "h1": "Syrian Restaurant",
     "h2": "With Feine Taste",
@@ -7,7 +8,7 @@
   },
   "gallery": {
     "title": "Our Premises",
-    "images": [
+    "products": [
       { "src": "/gallery/1.jpeg" },
       { "src": "/gallery/2.jpeg" },
       { "src": "/gallery/3.jpeg" },
@@ -48,7 +49,7 @@
     "title": "Our Top Dishes",
     "list": [
       {
-        "images": [
+        "products": [
           { "src": "/menu/falafel.jpg" },
           { "src": "/menu/hummus.jpg" },
           { "src": "/menu/1.jpg" },
@@ -59,7 +60,7 @@
         "label": "Dishes"
       },
       {
-        "images": [
+        "products": [
           { "src": "/menu/baklava.jpg" },
           { "src": "/menu/dates.jpg" },
           { "src": "/menu/eastern-sweets.jpg" }
@@ -67,7 +68,7 @@
         "label": "Desserts"
       },
       {
-        "images": [
+        "products": [
           { "src": "/menu/coffee.jpg" },
           { "src": "/menu/tea.jpg" },
           { "src": "/menu/lemonade.jpg" },

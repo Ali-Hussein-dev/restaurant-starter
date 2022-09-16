@@ -59,7 +59,6 @@ export const Footer = () => {
   const {
     footer: { links, name },
   } = useRestCtx();
-  console.log(links, name);
   //======================================return
   return (
     <div className="relative ">
