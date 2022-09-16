@@ -16,6 +16,7 @@ export const Layout = ({
   const router = useRouter();
   const url = new URL("https://placeholder.com/" + router.asPath);
   const theme = url.searchParams.get("theme") || "black";
+  console.log({ theme });
   //======================================return
   return (
     <div data-theme={theme}>
