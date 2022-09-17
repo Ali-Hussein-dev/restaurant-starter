@@ -22,12 +22,12 @@ export const Card = ({
   switch (variant) {
     case "no-text":
       return (
-        <div className="relative aspect-video md:aspect-square ">
+        <div className="relative aspect-video md:aspect-square md:mask md:mask-squircle ">
           <Image
             layout="fill"
             src={src}
             alt="image"
-            className="object-cover duration-700 rounded-2xl hover:scale-110"
+            className="object-cover duration-700 hover:scale-110 xs:rounded-3xl"
           />
         </div>
       );
