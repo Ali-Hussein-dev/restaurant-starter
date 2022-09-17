@@ -12,7 +12,7 @@ export const Tabs = ({
   //======================================return
   return (
     <div className="container w-full pt-2 mx-auto mb-4 space-y-1">
-      <div className="row-evenly md:row-center tabs tabs-boxed bg-base-100">
+      <div className="row-evenly md:row-center tabs tabs-boxed bg-base-100 mb-4">
         {tabButtons.map((tab, i) => (
           <button
             type="button"
