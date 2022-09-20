@@ -33,8 +33,8 @@ export const Card = ({
       );
     case "with-text":
       return (
-        <div className="relative group aspect-square ">
-          <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end ">
+        <div className="relative overflow-hidden group aspect-square rounded-2xl">
+          <div className="absolute inset-0 z-[2] grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur place-items-end ">
             <div className="pb-1">
               {/* title & body */}
               <div className="mb-1 border-b">
@@ -64,12 +64,7 @@ export const Card = ({
               </div>
             </div>
           </div>
-          <Image
-            layout="fill"
-            src={src}
-            alt={title}
-            className="object-cover rounded-2xl"
-          />
+          <Image layout="fill" src={src} alt={title} className="object-cover" />
         </div>
       );
     default:
