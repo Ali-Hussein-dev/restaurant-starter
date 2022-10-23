@@ -15,7 +15,7 @@ export const Gallery = () => {
   } = useRestCtx();
   //======================================return
   return (
-    <section id="#gallery" className="w-full px-2 element">
+    <section id="#gallery" className="w-full px-2 element ">
       <h2 className="mb-8 h2">{title}</h2>
       <Carousel images={products} />
     </section>

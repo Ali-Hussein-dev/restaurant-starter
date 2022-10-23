@@ -1,31 +1,36 @@
-import Image from "next/image";
 import * as React from "react";
-import { Autoplay, EffectCards, EffectCreative, Pagination } from "swiper";
+import Image from "next/image";
+import { Pagination, Zoom } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { isMobile } from "react-device-detect";
 
 //======================================
 export const Carousel = ({ images }: { images: { src: string }[] }) => {
   //======================================return
   return (
     <Swiper
-      modules={[Autoplay, EffectCards, Pagination, EffectCreative]}
-      autoplay
-      effect={isMobile ? "creative" : "cards"}
+      modules={[Pagination, Zoom]}
+      slidesPerView={2}
+      initialSlide={0}
+      spaceBetween={15}
       pagination={{
         clickable: true,
         dynamicBullets: true,
-        dynamicMainBullets: 5,
+        dynamicMainBullets: 3,
       }}
-      className="w-full lg:w-4/6 mx-auto"
+      zoom
+      centeredSlides
+      className="w-full mx-auto lg:w-11/12"
     >
       {images.map((img, i) => (
-        <SwiperSlide key={i} className="mx-auto md:aspect-video aspect-square">
+        <SwiperSlide
+          key={i}
+          className="mx-auto aspect-video rounded-sm overflow-hidden"
+        >
           <Image
             layout="fill"
             src={img.src}
             alt="image"
-            className="object-cover rounded-sm"
+            className="object-cover"
           />
         </SwiperSlide>
       ))}

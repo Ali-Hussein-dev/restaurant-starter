@@ -9,3 +9,7 @@
 
 /* utilities */
 @import "./tw/utilities.css";
+
+.swiper-pagination-bullet-active {
+  @apply bg-red-600;
+}
