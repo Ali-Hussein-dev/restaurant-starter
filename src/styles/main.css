@@ -9,3 +9,6 @@
 
 /* utilities */
 @import "./tw/utilities.css";
+
+/* swiper */
+@import "./custom-swiper.css";

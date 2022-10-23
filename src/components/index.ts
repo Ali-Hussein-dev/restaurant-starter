@@ -17,3 +17,4 @@ export * from "./Tabs";
 export * from "./menu-tabs";
 export * from "./card";
 export * from "./svg-icon";
+export * from "./about";

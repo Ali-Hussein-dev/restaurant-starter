@@ -8,7 +8,10 @@ export const ContactInfo = () => {
     contact: { address, contactInfo },
   } = useRestCtx();
   return (
-    <div className="text-lg rounded-sm gap-y-5 col-center text-slate-200 ">
+    <div
+      className="text-lg rounded-sm gap-y-5 col-center text-slate-200 "
+      data-aos="fade-up"
+    >
       <span className="pb-1 text-2xl font-bold uppercase border-b">
         {contactInfo.title}
       </span>

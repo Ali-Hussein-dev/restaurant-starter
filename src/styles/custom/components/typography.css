@@ -3,12 +3,12 @@
     @apply text-primary mb-5 text-4xl font-extrabold text-center md:mb-8 md:text-5xl lg:text-7xl;
   }
   .h2 {
-    @apply text-primary mb-5 text-3xl font-extrabold text-center md:mb-8 md:text-4xl lg:text-5xl;
+    @apply text-primary mb-5 text-3xl font-bold text-center md:mb-8 md:text-4xl lg:text-5xl;
   }
   .h3 {
-    @apply mb-5 text-2xl font-extrabold text-center md:mb-8 md:text-3xl lg:text-4xl;
+    @apply mb-5 text-2xl text-center md:mb-8 md:text-3xl lg:text-4xl;
   }
   .h4 {
-    @apply mb-5 text-xl font-extrabold text-center md:mb-8 md:text-2xl lg:text-3xl;
+    @apply mb-5 text-xl text-center md:mb-8 md:text-2xl lg:text-3xl;
   }
 }
