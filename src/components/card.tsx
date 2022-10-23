@@ -17,12 +17,20 @@ export const Card = ({
   isHalal,
   isVegi,
   isSpicy,
-}: CardPropsT) => {
+  index,
+}: CardPropsT & { index: number }) => {
+  const animation = {
+    "data-aos": "flip-up",
+    "data-aos-delay": 500 + index * 100,
+  };
   //======================================return
   switch (variant) {
     case "no-text":
       return (
-        <div className="relative aspect-video md:aspect-square md:mask md:mask-squircle ">
+        <div
+          className="relative aspect-video md:aspect-square md:mask md:mask-squircle "
+          {...animation}
+        >
           <Image
             layout="fill"
             src={src}
@@ -33,7 +41,7 @@ export const Card = ({
       );
     case "with-text":
       return (
-        <div className="relative group aspect-square ">
+        <div className="relative group aspect-square " {...animation}>
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end ">
             <div className="pb-1">
               {/* title & body */}
