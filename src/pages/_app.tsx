@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/mousewheel";
 import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";

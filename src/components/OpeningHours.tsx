@@ -8,8 +8,11 @@ export const OpeningHours = () => {
   } = useRestCtx();
   const { t } = useTranslation();
   return (
-    <div className="space-y-3 text-slate-300 col-center" data-aos="flip-right">
-      <h3 className="pb-1 text-2xl font-bold uppercase border-b text-slate-200">
+    <div className="space-y-3 text-slate-300 col-center">
+      <h3
+        data-aos="fade-in"
+        className="pb-1 text-2xl font-bold uppercase border-b text-slate-200"
+      >
         {openingHours.title}
       </h3>
       <div className="min-w-[170px]">

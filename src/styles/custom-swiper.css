@@ -1,3 +1,8 @@
-.swiper-pagination-bullet-active {
+/* .swiper-pagination-bullet-active {
   @apply bg-red-500;
+} */
+
+:root {
+  --swiper-pagination-color: rgba(239, 68, 68, 1);
+  --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 1);
 }

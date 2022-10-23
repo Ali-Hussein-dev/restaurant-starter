@@ -10,8 +10,7 @@ export const ContactInfo = () => {
   return (
     <div
       className="text-lg rounded-sm gap-y-5 col-center text-slate-200 "
-      data-aos="flip-left"
-      data-aos-delay="500"
+      data-aos="fade-in"
     >
       <span className="pb-1 text-2xl font-bold uppercase border-b">
         {contactInfo.title}
