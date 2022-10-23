@@ -1,5 +1,13 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Gallery, Hero, Layout, Contact, Form, MenuTabs } from "../components";
+import {
+  Gallery,
+  Hero,
+  Layout,
+  Contact,
+  Form,
+  MenuTabs,
+  About,
+} from "../components";
 import * as React from "react";
 import { RestProv } from "../hooks";
 import { InferGetStaticPropsType } from "next";
@@ -16,6 +24,7 @@ const Theme: NextPage = ({
         <Gallery />
         <Form />
         <MenuTabs />
+        <About />
         <Contact />
       </Layout>
     </RestProv>
