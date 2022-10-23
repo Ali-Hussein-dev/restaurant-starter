@@ -61,7 +61,7 @@ export const Footer = () => {
   } = useRestCtx();
   //======================================return
   return (
-    <div className="relative ">
+    <div className="relative px-1">
       <div className="container mx-auto text-base-content">
         {/* <footer className="grid px-2 py-5 grid-cols-2 text-xl md:grid-cols-4 footer">
           <div>

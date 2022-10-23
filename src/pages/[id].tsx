@@ -1,11 +1,9 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Gallery, Hero, Layout, Contact, Form, MenuTabs } from "../components";
 import * as React from "react";
-import { themes } from "../utils/themes-list";
 import { RestProv } from "../hooks";
 import { InferGetStaticPropsType } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { useRouter } from "next/router";
 
 //----------------------------------------------------------------------
 const Theme: NextPage = ({
@@ -26,10 +24,6 @@ const Theme: NextPage = ({
 
 export default Theme;
 
-interface ParamsT extends ParsedUrlQuery {
-  theme: typeof themes[number];
-}
-
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [{ params: { id: "template" } }, { params: { id: "template-2" } }],
@@ -38,8 +32,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { id } = ctx.params as ParamsT;
-  console.log({ id });
+  const { id } = ctx.params as ParsedUrlQuery;
   const data = await import(`../../db/${id}.json`).then((d) => d.default);
   return {
     props: {
