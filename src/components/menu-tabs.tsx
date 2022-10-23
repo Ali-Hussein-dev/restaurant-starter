@@ -7,9 +7,10 @@ import { CgChevronRightO } from "react-icons/cg";
 const Panel = ({ products }: { products: ProductT[] }) => {
   return (
     <GridLayout
-      items={products.map((product) => (
+      items={products.map((product, i) => (
         <Card
           key={product.name}
+          index={i + 1}
           variant={product.name ? "with-text" : "no-text"}
           {...product}
         />

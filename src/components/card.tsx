@@ -17,12 +17,18 @@ export const Card = ({
   isHalal,
   isVegi,
   isSpicy,
-}: CardPropsT) => {
+  index,
+}: CardPropsT & { index: number }) => {
   //======================================return
   switch (variant) {
     case "no-text":
       return (
-        <div className="relative aspect-video md:aspect-square md:mask md:mask-squircle ">
+        <div
+          className="relative aspect-video md:aspect-square md:mask md:mask-squircle "
+          data-aos="flip-up"
+          data-aos-delay="500"
+          data-aos-duration={"500" + index * 100}
+        >
           <Image
             layout="fill"
             src={src}
@@ -33,7 +39,12 @@ export const Card = ({
       );
     case "with-text":
       return (
-        <div className="relative overflow-hidden group aspect-square rounded-2xl">
+        <div
+          className="relative overflow-hidden group aspect-square rounded-2xl"
+          data-aos="flip-up"
+          data-aos-delay="500"
+          data-aos-duration={"500" + index * 100}
+        >
           <div className="absolute inset-0 z-[2] grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur place-items-end ">
             <div className="pb-1">
               {/* title & body */}

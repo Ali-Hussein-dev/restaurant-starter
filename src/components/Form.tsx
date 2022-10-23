@@ -16,6 +16,8 @@ export const Form = () => {
     <section
       id="#form"
       className="container px-4 mx-auto lg:px-1 py-28 element"
+      data-aos="fade-up"
+      data-aos-deylay="600"
     >
       <div className="mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200">
         <div className="max-w-4xl px-6 pt-4 col-center gap-y-10 md:flex-row md:justify-between md:gap-x-14 h-4/6">
