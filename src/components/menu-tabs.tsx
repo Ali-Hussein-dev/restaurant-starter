@@ -27,7 +27,7 @@ export const MenuTabs = () => {
   //======================================return
   return (
     <section id="#menu" className="container pb-3 mx-auto col-center">
-      <h2 className="mb-2 h2">{title}</h2>
+      <h2 className="mb-2 h2 border-b pb-4">{title}</h2>
       <div className="w-11/12 lg:w-8/12 ">
         <Tabs
           panels={list.map((obj) => (
