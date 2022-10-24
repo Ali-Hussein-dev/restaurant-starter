@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
     // here you can add your aos options
     AOS.init({
-      offset: 120,
+      offset: 100,
       delay: 600,
       duration: 600,
       once: true,
