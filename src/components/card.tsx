@@ -28,21 +28,21 @@ export const Card = ({
     case "no-text":
       return (
         <div
-          className="relative lg:max-w-[14rem] aspect-video md:aspect-square md:mask md:mask-squircle mx-auto"
+          className="relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto"
           {...animation}
         >
           <Image
             layout="fill"
             src={src}
             alt="image"
-            className="object-cover duration-700 hover:scale-110 xs:rounded-3xl"
+            className="object-cover duration-700 hover:scale-110 "
           />
         </div>
       );
     case "with-text":
       return (
         <div
-          className="relative overflow-hidden group lg:aspect-square aspect-video rounded-2xl"
+          className="relative overflow-hidden group lg:aspect-square aspect-video rounded-2xl mask mask-wide"
           {...animation}
         >
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end">
