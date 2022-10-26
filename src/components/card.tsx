@@ -75,7 +75,13 @@ export const Card = ({
               </div>
             </div>
           </div>
-          <Image layout="fill" src={src} alt={title} className="object-cover" />
+          <Image
+            layout="fill"
+            loading="eager"
+            src={src}
+            alt={title}
+            className="object-cover"
+          />
         </div>
       );
     default:

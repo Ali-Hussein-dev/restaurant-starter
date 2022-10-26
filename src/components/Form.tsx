@@ -26,6 +26,7 @@ export const Form = () => {
             <div className="relative h-40 aspect-square md:h-52">
               <Image
                 layout="fill"
+                loading="eager"
                 src="/mail.svg"
                 alt="mail"
                 className="object-cover"

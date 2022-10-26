@@ -54,6 +54,7 @@ export const Navbar = () => {
                       <Image
                         className="block w-auto h-12"
                         src="/logo.png"
+                        loading="eager"
                         alt="logo"
                         width={50}
                         height={50}
