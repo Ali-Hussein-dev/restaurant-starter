@@ -44,7 +44,7 @@ export const Card = ({
     case "with-text":
       return (
         <div
-          className="relative overflow-hidden group lg:aspect-square aspect-video rounded-2xl mask mask-wide"
+          className="relative overflow-hidden  group aspect-[4/3] rounded-2xl"
           {...animation}
         >
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end">
@@ -83,6 +83,8 @@ export const Card = ({
             src={src}
             alt={title}
             className="object-cover"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
           />
         </div>
       );
