@@ -36,6 +36,8 @@ export const Card = ({
             src={src}
             alt="image"
             className="object-cover duration-700 hover:scale-110 "
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
           />
         </div>
       );
