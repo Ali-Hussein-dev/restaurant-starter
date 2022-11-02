@@ -37,6 +37,8 @@ export const Carousel = ({ images }: { images: { src: string }[] }) => {
               src={img.src}
               alt="image"
               className="object-cover"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
             />
           </SwiperSlide>
         ))}

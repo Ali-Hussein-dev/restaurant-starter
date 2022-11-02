@@ -30,6 +30,8 @@ export const Form = () => {
                 src="/mail.svg"
                 alt="mail"
                 className="object-cover"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
               />
             </div>
           </div>
