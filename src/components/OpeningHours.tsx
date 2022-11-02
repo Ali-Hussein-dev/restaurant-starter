@@ -1,14 +1,23 @@
 import useTranslation from "next-translate/useTranslation";
+import { useInView } from "react-intersection-observer";
 import { useRestCtx } from "../hooks";
-import { OpeningHoursT } from "../types/restaurant";
+import clsx from "clsx";
 
 export const OpeningHours = () => {
   const {
     contact: { openingHours },
   } = useRestCtx();
   const { t } = useTranslation();
+  const { ref, inView } = useInView({ threshold: 0.2 });
+
   return (
-    <div className="space-y-3 text-slate-300 col-center" data-aos="fade-up">
+    <div
+      ref={ref}
+      className={clsx(
+        "space-y-3 text-slate-300 col-center",
+        inView && "animate-fade-left"
+      )}
+    >
       <h3 className="pb-1 text-2xl font-bold uppercase border-b text-slate-200">
         {openingHours.title}
       </h3>

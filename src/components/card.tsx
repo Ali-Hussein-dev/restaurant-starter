@@ -1,7 +1,9 @@
 import Image from "next/image";
 import * as React from "react";
+import { useInView } from "react-intersection-observer";
 import { ProductT } from "../types/restaurant";
 import { SvgIcon } from "./svg-icon";
+import clsx from "clsx";
 
 interface CardPropsT extends ProductT {
   variant: "no-text" | "with-text";
@@ -19,17 +21,18 @@ export const Card = ({
   isSpicy,
   index,
 }: CardPropsT & { index: number }) => {
-  const animation = {
-    "data-aos": "flip-up",
-    "data-aos-delay": 500 + index * 100,
-  };
+  const delay = 500 + index * 100;
+  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
   //======================================return
   switch (variant) {
     case "no-text":
       return (
         <div
-          className="relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto"
-          {...animation}
+          ref={ref}
+          className={clsx(
+            "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto",
+            inView && `animate-fade-up animate-delay-[${delay}]`
+          )}
         >
           <Image
             layout="fill"
@@ -44,8 +47,11 @@ export const Card = ({
     case "with-text":
       return (
         <div
-          className="relative overflow-hidden  group aspect-[4/3] rounded-2xl"
-          {...animation}
+          ref={ref}
+          className={clsx(
+            "relative overflow-hidden  group aspect-[4/3] rounded-2xl",
+            inView && `animate-fade-up animate-delay-[${delay}]`
+          )}
         >
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end">
             <div className="pb-1">

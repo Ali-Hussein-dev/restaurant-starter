@@ -2,15 +2,21 @@ import { MdEmail } from "react-icons/md";
 import { HiOutlineDeviceMobile } from "react-icons/hi";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { useRestCtx } from "../hooks";
-
+import { useInView } from "react-intersection-observer";
+import clsx from "clsx";
 export const ContactInfo = () => {
   const {
     contact: { address, contactInfo },
   } = useRestCtx();
+  const { ref, inView } = useInView({ threshold: 0.2 });
+
   return (
     <div
-      className="text-lg rounded-sm gap-y-5 col-center text-slate-200 "
-      data-aos="fade-up"
+      ref={ref}
+      className={clsx(
+        "text-lg rounded-sm gap-y-5 col-center text-slate-200 ",
+        inView && "animate-fade-right"
+      )}
     >
       <span className="pb-1 text-2xl font-bold uppercase border-b">
         {contactInfo.title}
