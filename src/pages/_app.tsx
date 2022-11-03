@@ -5,20 +5,9 @@ import NextNProgress from "nextjs-progressbar";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "../styles/main.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  React.useEffect(() => {
-    // here you can add your aos options
-    AOS.init({
-      offset: 100,
-      delay: 600,
-      duration: 600,
-      once: true,
-    });
-  }, []);
   return (
     <>
       <NextNProgress
