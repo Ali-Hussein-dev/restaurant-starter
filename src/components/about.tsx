@@ -9,7 +9,10 @@ export const About = () => {
   return (
     <div className="px-4">
       <div className="flex flex-col items-center justify-center max-w-6xl px-4 py-10 mx-auto mb-16 gap-2 border-b-4 border-l-4 rounded-bl-lg shadow lg:flex-row gap-x-4">
-        <div ref={ref} className={clsx(inView && "animate-fade-right")}>
+        <div
+          ref={ref}
+          className={clsx(inView && "animate-fade-right animate-delay-200")}
+        >
           <h2 className="max-w-sm pb-4 border-b h2 lg:text-left ">
             Who we are?
           </h2>

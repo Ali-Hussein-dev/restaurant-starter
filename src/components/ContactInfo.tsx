@@ -15,7 +15,7 @@ export const ContactInfo = () => {
       ref={ref}
       className={clsx(
         "text-lg rounded-sm gap-y-5 col-center text-slate-200 ",
-        inView && "animate-fade-right"
+        inView && "animate-fade-right animate-delay-200"
       )}
     >
       <span className="pb-1 text-2xl font-bold uppercase border-b">

@@ -21,8 +21,7 @@ export const Card = ({
   isSpicy,
   index,
 }: CardPropsT & { index: number }) => {
-  const delay = 500 + index * 100;
-  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   //======================================return
   switch (variant) {
     case "no-text":
@@ -31,7 +30,14 @@ export const Card = ({
           ref={ref}
           className={clsx(
             "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto",
-            inView && `animate-fade-up animate-delay-[${delay}]`
+            inView && "animate-fade-up",
+            index == 0 && "animate-delay-[400ms]",
+            index == 1 && "animate-delay-[500ms]",
+            index == 2 && "animate-delay-[600ms]",
+            index == 3 && "animate-delay-[700ms]",
+            index == 4 && "animate-delay-[800ms]",
+            index == 5 && "animate-delay-[900ms]",
+            index == 6 && "animate-delay-[1000ms]"
           )}
         >
           <Image
@@ -50,7 +56,14 @@ export const Card = ({
           ref={ref}
           className={clsx(
             "relative overflow-hidden  group aspect-[4/3] rounded-2xl",
-            inView && `animate-fade-up animate-delay-[${delay}]`
+            inView && "animate-fade-up",
+            index == 0 && "animate-delay-[400ms]",
+            index == 1 && "animate-delay-[500ms]",
+            index == 2 && "animate-delay-[600ms]",
+            index == 3 && "animate-delay-[700ms]",
+            index == 4 && "animate-delay-[800ms]",
+            index == 5 && "animate-delay-[900ms]",
+            index == 6 && "animate-delay-[1000ms]"
           )}
         >
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end">

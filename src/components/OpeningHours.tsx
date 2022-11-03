@@ -15,7 +15,7 @@ export const OpeningHours = () => {
       ref={ref}
       className={clsx(
         "space-y-3 text-slate-300 col-center",
-        inView && "animate-fade-left"
+        inView && "animate-fade-left animate-delay-200"
       )}
     >
       <h3 className="pb-1 text-2xl font-bold uppercase border-b text-slate-200">

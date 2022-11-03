@@ -22,7 +22,7 @@ export const Form = () => {
     >
       <div
         className={clsx(
-          inView ? "animate-fade-up" : "",
+          inView && "animate-fade-up animate-delay-200",
           "mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200"
         )}
         ref={ref}
