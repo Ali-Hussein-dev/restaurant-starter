@@ -41,12 +41,12 @@ export const Navbar = () => {
         as="nav"
         ref={() => ref}
         className={`sticky top-0 z-10 ${
-          y > height ? "bg-slate-900/20 backdrop-blur-lg" : ""
+          y > height && "bg-slate-900/20 backdrop-blur-lg"
         }`}
       >
         {({ open: isOpen }) => (
           <>
-            <div className="container mx-auto">
+            <div className={`container mx-auto ${isOpen && "bg-base-100/90 "}`}>
               <div className="h-16 md:row-center row-between">
                 <div className="flex items-center">
                   {/* <div className="flex-shrink-0">
