@@ -19,7 +19,7 @@ export const ImageBg = ({
       <Image
         src={src}
         alt="background"
-        layout="fill"
+        fill
         className={`w-full h-full image-full object-cover ${
           brightness ? brightness : "brightness-50"
         }`}

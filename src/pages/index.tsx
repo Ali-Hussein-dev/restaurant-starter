@@ -23,7 +23,9 @@ const Home: NextPage = () => {
                 }}
                 passHref
               >
-                <a className="capitalize card-title">{item.label} Theme</a>
+                <span className="capitalize card-title">
+                  {item.label} Theme
+                </span>
               </Link>
             </li>
           ))}

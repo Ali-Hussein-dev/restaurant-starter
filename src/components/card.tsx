@@ -41,7 +41,7 @@ export const Card = ({
           )}
         >
           <Image
-            layout="fill"
+            fill
             src={src}
             alt="image"
             className="object-cover duration-700 hover:scale-110 "
@@ -97,10 +97,10 @@ export const Card = ({
             </div>
           </div>
           <Image
-            layout="fill"
+            fill
             loading="eager"
             src={src}
-            alt={title}
+            alt={title as string}
             className="object-cover"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"

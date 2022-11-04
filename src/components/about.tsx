@@ -33,7 +33,7 @@ export const About = () => {
         >
           <Image
             src="/team.jpg"
-            layout="fill"
+            fill
             className="absolute inset-0 w-full object-cover"
             alt="lantern"
           />
