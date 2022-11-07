@@ -27,18 +27,17 @@ export const Carousel = ({ images }: { images: { src: string }[] }) => {
         {images.map((img, i) => (
           <SwiperSlide
             key={i}
-            className="relative w-auto overflow-hidden border rounded"
+            className="relative overflow-hidden border rounded aspect-video animate-fade"
           >
             <Image
-              layout="responsive"
+              fill
+              quality="50"
               loading="eager"
-              width={400}
-              height={300}
               src={img.src}
-              alt="image"
               className="object-cover"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
+              alt="image"
             />
           </SwiperSlide>
         ))}

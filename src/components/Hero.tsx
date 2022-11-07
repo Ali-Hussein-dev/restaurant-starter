@@ -37,7 +37,7 @@ export const Hero = () => {
             </ScrollLink>
           </div>
         </div>
-        <ImageBg loading="eager" src={img} />
+        <ImageBg loading="eager" src={img} priority quality={60} />
       </div>
     </Section>
   );

@@ -23,8 +23,6 @@ export const ImageBg = ({
         className={`w-full h-full image-full object-cover ${
           brightness ? brightness : "brightness-50"
         }`}
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
         {...rest}
       />
     </div>

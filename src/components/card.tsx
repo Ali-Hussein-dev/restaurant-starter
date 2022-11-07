@@ -43,6 +43,8 @@ export const Card = ({
           <Image
             fill
             src={src}
+            quality="50"
+            loading="eager"
             alt="image"
             className="object-cover duration-700 hover:scale-110 "
             placeholder="blur"
@@ -100,6 +102,7 @@ export const Card = ({
             fill
             loading="eager"
             src={src}
+            quality="50"
             alt={title as string}
             className="object-cover"
             placeholder="blur"
