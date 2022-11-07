@@ -1,8 +1,8 @@
 {
   "theme": "luxury",
   "hero": {
-    "h1": "Syrian Restaurant",
-    "h2": "With Feine Taste",
+    "h1": "Oriental Restaurant",
+    "h2": "from origin",
     "cta": "Book a table",
     "img": "/falafel-fresh-salad.jpg"
   },
@@ -63,6 +63,7 @@
         "products": [
           { "src": "/menu/baklava.jpg" },
           { "src": "/menu/dates.jpg" },
+          { "src": "/menu/baklava-with-cookies.jpg" },
           { "src": "/menu/eastern-sweets.jpg" }
         ],
         "label": "Desserts"
