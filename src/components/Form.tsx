@@ -23,7 +23,7 @@ export const Form = () => {
       <div
         className={clsx(
           inView && "animate-fade-up animate-delay-200",
-          "mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200"
+          "mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200 opacity-0"
         )}
         ref={ref}
       >
@@ -31,7 +31,8 @@ export const Form = () => {
           <div className="p-12 md:p-16 bg-base-300/80 rounded-[25%_75%_75%_25%_/_80%_27%_73%_20%]">
             <div className="relative h-40 aspect-square md:h-52">
               <Image
-                layout="fill"
+                fill
+                quality={60}
                 loading="eager"
                 src="/mail.svg"
                 alt="mail"

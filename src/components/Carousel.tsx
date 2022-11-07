@@ -27,13 +27,12 @@ export const Carousel = ({ images }: { images: { src: string }[] }) => {
         {images.map((img, i) => (
           <SwiperSlide
             key={i}
-            className="relative w-auto overflow-hidden border rounded"
+            className="relative overflow-hidden border rounded aspect-video"
           >
             <Image
-              layout="responsive"
               loading="eager"
-              width={400}
-              height={300}
+              fill
+              quality={45}
               src={img.src}
               alt="image"
               className="object-cover"

@@ -21,7 +21,7 @@ export const Gallery = () => {
       <div ref={ref} className="max-w-2xl mx-auto">
         <h2
           className={clsx(
-            "pb-4 mb-3 border-b h2",
+            "pb-4 mb-3 border-b h2 opacity-0",
             inView && "animate-fade-down"
           )}
         >
@@ -29,7 +29,7 @@ export const Gallery = () => {
         </h2>
         <h3
           className={clsx(
-            "mb-8 font-light text-center h5 md:h4 ",
+            "mb-8 font-light text-center h5 md:h4 opacity-0",
             inView && "animate-fade-up"
           )}
         >
