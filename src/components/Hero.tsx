@@ -19,14 +19,19 @@ export const Hero = () => {
         >
           <h1
             className={clsx(
-              "text-4xl md:text-6xl mb-4 font-sans font-extrabold",
+              "text-4xl md:text-6xl mb-4 font-sans font-extrabold opacity-0",
               inView && "animate-fade-down animate-delay-200"
             )}
           >
             {h1}
             <span className="block mt-1">{h2}</span>
           </h1>
-          <div className={clsx(inView && "animate-fade-up animate-delay-200")}>
+          <div
+            className={clsx(
+              inView && "animate-fade-up animate-delay-200",
+              "opacity-0"
+            )}
+          >
             <ScrollLink
               to="#form"
               activeClass="active"

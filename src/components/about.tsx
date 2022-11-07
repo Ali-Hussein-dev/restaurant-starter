@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
 //======================================
 export const About = () => {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
 
   return (
     <div className="px-4">

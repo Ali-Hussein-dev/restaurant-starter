@@ -21,7 +21,7 @@ export const Card = ({
   isSpicy,
   index,
 }: CardPropsT & { index: number }) => {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.2 });
   //======================================return
   switch (variant) {
     case "no-text":
@@ -29,7 +29,7 @@ export const Card = ({
         <div
           ref={ref}
           className={clsx(
-            "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto",
+            "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto opacity-0",
             inView && "animate-fade-up",
             index == 0 && "animate-delay-[400ms]",
             index == 1 && "animate-delay-[500ms]",
@@ -57,7 +57,7 @@ export const Card = ({
         <div
           ref={ref}
           className={clsx(
-            "relative overflow-hidden  group aspect-[4/3] rounded-2xl",
+            "relative overflow-hidden group aspect-[4/3] rounded-2xl opacity-0",
             inView && "animate-fade-up",
             index == 0 && "animate-delay-[400ms]",
             index == 1 && "animate-delay-[500ms]",

@@ -10,7 +10,7 @@ export const Form = () => {
   const {
     contactForm: { title, description },
   } = useRestCtx();
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
   const { t } = useTranslation();
   //======================================return
   return (
@@ -21,7 +21,7 @@ export const Form = () => {
       <div
         className={clsx(
           inView && "animate-fade-up animate-delay-200",
-          "mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200"
+          "mx-auto border border-b-8 border-l-8 rounded-sm md:row-center md:px-3 py-14 lg:w-4/6 bg-base-200 opacity-0"
         )}
         ref={ref}
       >
