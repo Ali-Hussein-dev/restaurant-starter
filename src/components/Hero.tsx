@@ -10,7 +10,6 @@ export const Hero = () => {
     hero: { h1, h2, cta, img },
   } = useRestCtx();
   const { ref, inView } = useInView();
-  //======================================return
   return (
     <Section id="#home">
       <div className="w-full px-1 lg:row-start row-center">
@@ -20,7 +19,7 @@ export const Hero = () => {
         >
           <h1
             className={clsx(
-              "mb-4 text-4xl font-extrabold md:text-6xl",
+              "text-4xl md:text-6xl mb-4 font-sans font-extrabold",
               inView && "animate-fade-down animate-delay-200"
             )}
           >
