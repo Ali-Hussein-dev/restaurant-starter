@@ -29,21 +29,22 @@ export const Card = ({
         <div
           ref={ref}
           className={clsx(
-            "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto",
+            "relative lg:max-w-[14rem] aspect-video md:aspect-square mask mask-wide md:mask-squircle mx-auto opacity-0",
             inView && "animate-fade-up",
-            index == 0 && "animate-delay-[400ms]",
-            index == 1 && "animate-delay-[500ms]",
-            index == 2 && "animate-delay-[600ms]",
-            index == 3 && "animate-delay-[700ms]",
-            index == 4 && "animate-delay-[800ms]",
-            index == 5 && "animate-delay-[900ms]",
-            index == 6 && "animate-delay-[1000ms]"
+            index == 0 && "animate-delay-[300ms]",
+            index == 1 && "animate-delay-[400ms]",
+            index == 2 && "animate-delay-[500ms]",
+            index == 3 && "animate-delay-[600ms]",
+            index == 4 && "animate-delay-[700ms]",
+            index == 5 && "animate-delay-[800ms]",
+            index == 6 && "animate-delay-[900ms]"
           )}
         >
           <Image
-            layout="fill"
+            fill
             src={src}
-            alt="image"
+            quality={55}
+            alt={title as string}
             className="object-cover duration-700 hover:scale-110 "
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
@@ -55,15 +56,15 @@ export const Card = ({
         <div
           ref={ref}
           className={clsx(
-            "relative overflow-hidden  group aspect-[4/3] rounded-2xl",
+            "relative overflow-hidden  group aspect-[4/3] rounded-2xl opacity-0",
             inView && "animate-fade-up",
-            index == 0 && "animate-delay-[400ms]",
-            index == 1 && "animate-delay-[500ms]",
-            index == 2 && "animate-delay-[600ms]",
-            index == 3 && "animate-delay-[700ms]",
-            index == 4 && "animate-delay-[800ms]",
-            index == 5 && "animate-delay-[900ms]",
-            index == 6 && "animate-delay-[1000ms]"
+            index == 0 && "animate-delay-[300ms]",
+            index == 1 && "animate-delay-[400ms]",
+            index == 2 && "animate-delay-[500ms]",
+            index == 3 && "animate-delay-[600ms]",
+            index == 4 && "animate-delay-[700ms]",
+            index == 5 && "animate-delay-[800ms]",
+            index == 6 && "animate-delay-[900ms]"
           )}
         >
           <div className="absolute inset-0 z-10 grid px-2 prose duration-1000 opacity-0 group-hover:opacity-100 bg-base-300/70 backdrop-blur-sm place-items-end">
@@ -97,10 +98,11 @@ export const Card = ({
             </div>
           </div>
           <Image
-            layout="fill"
+            fill
             loading="eager"
             src={src}
-            alt={title}
+            quality={55}
+            alt={title as string}
             className="object-cover"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"

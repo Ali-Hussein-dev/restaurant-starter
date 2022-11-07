@@ -5,7 +5,6 @@ const withPlugins = require("next-compose-plugins");
 const nextConfig = (phase, config) => ({
   ...config,
   reactStrictMode: true,
-  swcMinify: true,
   i18n: { locales: ["en-US", "de"], defaultLocale: "en-US" },
 });
 

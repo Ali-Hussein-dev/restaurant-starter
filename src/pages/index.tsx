@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import * as React from "react";
 import Link from "next/link";
 const gridItems = [
-  { href: "/template", label: "template" },
+  { href: "/template", label: "Theme" },
   {
     href: "/template-2",
-    label: "template 2",
+    label: "Theme 2",
   },
 ];
 //----------------------------------------------------------------------
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
                 }}
                 passHref
               >
-                <a className="capitalize card-title">{item.label} Theme</a>
+                <a className="capitalize card-title">{item.label}</a>
               </Link>
             </li>
           ))}

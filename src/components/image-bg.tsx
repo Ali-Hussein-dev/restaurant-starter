@@ -1,5 +1,7 @@
+import clsx from "clsx";
 import Image, { ImageProps } from "next/image";
 import * as React from "react";
+import { useInView } from "react-intersection-observer";
 
 //======================================
 export const ImageBg = ({
@@ -13,18 +15,22 @@ export const ImageBg = ({
    */
   brightness?: string;
 } & Partial<ImageProps>) => {
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+
   //======================================return
   return (
-    <div className="absolute inset-0 w-full h-full">
+    <div className="absolute inset-0 w-full h-full" ref={ref}>
       <Image
         src={src}
         alt="background"
-        layout="fill"
-        className={`w-full h-full image-full object-cover ${
-          brightness ? brightness : "brightness-50"
-        }`}
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=)"
+        fill
+        quality="50"
+        className={clsx(
+          `w-full h-full image-full object-cover ${
+            brightness ? brightness : "brightness-50"
+          } opacity-0`,
+          inView && "animate-fade"
+        )}
         {...rest}
       />
     </div>

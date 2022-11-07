@@ -6,10 +6,12 @@ import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
 import "../styles/main.css";
+import { Inter } from "@next/font/google";
 
+const font = Inter({ subsets: ["latin"] });
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className={font.className}>
       <NextNProgress
         color="#ffb366"
         startPosition={0.3}
@@ -18,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         showOnShallow={true}
       />
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }
 
