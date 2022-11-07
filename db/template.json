@@ -63,6 +63,7 @@
         "products": [
           { "src": "/menu/baklava.jpg" },
           { "src": "/menu/dates.jpg" },
+          { "src": "/menu/baklava-with-cookies.jpg" },
           { "src": "/menu/eastern-sweets.jpg" }
         ],
         "label": "Desserts"
