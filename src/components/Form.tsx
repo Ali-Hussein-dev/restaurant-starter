@@ -49,6 +49,7 @@ export const Form = () => {
             method="POST"
             className="space-y-2"
           >
+            <input hidden name="form-name" value="contact-template" />
             <div className="mb-4">
               <h3 className="mb-2 h3 text-primary">{title}</h3>
               <p className="mx-auto text-center md:w-10/12">{description}</p>
