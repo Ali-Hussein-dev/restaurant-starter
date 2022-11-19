@@ -46,6 +46,7 @@ export const Form = () => {
             name="contact-template"
             data-netlify="true"
             data-netlify-honeybot="bot-field"
+            method="post"
             className="space-y-2"
           >
             <div className="mb-4">
