@@ -45,8 +45,8 @@ export const Form = () => {
           <form
             name="contact-template"
             data-netlify="true"
-            data-netlify-honeybot="bot-field"
-            method="post"
+            data-netlify-honeypot="bot-field"
+            method="POST"
             className="space-y-2"
           >
             <div className="mb-4">
@@ -72,7 +72,7 @@ export const Form = () => {
             ></textarea>
             <button
               type="submit"
-              className="btn w-full text-xl uppercase bg-transparent border-none rounded"
+              className="btn w-full text-xl uppercase bg-transparent rounded focus:btn-outline"
             >
               {t("form.submit")}
             </button>
