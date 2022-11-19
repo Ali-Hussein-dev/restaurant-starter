@@ -42,12 +42,20 @@ export const Form = () => {
               />
             </div>
           </div>
-          <div className="space-y-2">
+          <form
+            name="contact-template"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            method="POST"
+            className="space-y-2"
+          >
+            <input hidden name="form-name" value="contact-template" />
             <div className="mb-4">
               <h3 className="mb-2 h3 text-primary">{title}</h3>
               <p className="mx-auto text-center md:w-10/12">{description}</p>
             </div>
             <div className="row-center gap-x-2">
+              <input className="hidden" name="bot-field" />
               <input
                 type="text"
                 placeholder={t("form.name")}
@@ -65,11 +73,11 @@ export const Form = () => {
             ></textarea>
             <button
               type="submit"
-              className="btn w-full text-xl uppercase bg-transparent border-none rounded"
+              className="btn w-full text-xl uppercase bg-transparent rounded focus:btn-outline"
             >
               {t("form.submit")}
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
